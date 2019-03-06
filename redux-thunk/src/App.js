@@ -7,6 +7,11 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
+          <h1
+            className="App-link"
+          >
+            Learn React Thunk
+          </h1>
           <AddTodo></AddTodo>
           <TodoList></TodoList>
         </header>
