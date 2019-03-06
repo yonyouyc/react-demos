@@ -6,3 +6,4 @@ const store = createStore(
   todoApp,
   applyMiddleware(thunk)
 );
+export default store

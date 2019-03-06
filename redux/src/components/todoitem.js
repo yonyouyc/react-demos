@@ -4,7 +4,6 @@ import { toggleTodo } from '../actions'
 import { connect } from 'react-redux'
 class TodoItem extends Component {
   handleClick () {
-    debugger
     const { index, toggleItem } = this.props
     toggleItem(index)
   }

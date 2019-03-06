@@ -1,7 +1,7 @@
 // 输入框和新增todo按钮
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
-import { addTodo } from '../actions'
+import { addTodoAsync } from '../actions'
 class AddTodo extends Component {
   state = {
     text: ''
@@ -10,8 +10,8 @@ class AddTodo extends Component {
     this.setState({ text: event.target.value })
   }
   handleAdd () {
-    const { addTodo } = this.props
-    addTodo(this.state.text)
+    const { addTodoAsync } = this.props
+    addTodoAsync(this.state.text)
     this.setState({ text: '' })
   }
   render () {
@@ -25,8 +25,8 @@ class AddTodo extends Component {
 }
 const mapDispatchToProps = dispatch => {
   return {
-    addTodo: text => {
-      dispatch(addTodo(text))
+    addTodoAsync: text => {
+      dispatch(addTodoAsync(text))
     }
   }
 }

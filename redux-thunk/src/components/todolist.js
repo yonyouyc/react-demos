@@ -4,19 +4,22 @@ import TodoItem from './todoitem'
 import { connect } from 'react-redux'
 class TodoList extends Component {
   render () {
-    const { todos } = this.props
+    const { todos, loading } = this.props
     const list = todos.map((item, index) => {
       return <TodoItem item={ item } index={ index } key={ index }></TodoItem>
     })
     return (
-      <div >{ list }
+      <div >
+        { loading ? <div>loading...</div> : '' }
+        { list }
       </div>
     )
   }
 }
 const mapStateToProp = state => {
   return {
-    todos: state.todos
+    todos: state.todos,
+    loading: state.loading
   }
 }
 export default connect(mapStateToProp, null)(TodoList)
