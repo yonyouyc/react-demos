@@ -26,6 +26,7 @@ class AddTodo extends Component {
 const mapDispatchToProps = dispatch => {
   return {
     addTodo: text => {
+      debugger
       dispatch(addTodo(text))
     }
   }
