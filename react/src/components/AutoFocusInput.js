@@ -2,6 +2,10 @@ import React, {
     Component
 } from 'react';
 class AutoFocusInput extends Component {
+    /* constructor(){
+        super()
+        this.myRef = React.createRef()
+    } */
     componentDidMount() {
         this.input.focus()
     }
@@ -9,6 +13,7 @@ class AutoFocusInput extends Component {
         return ( 
             <div>
                 <input ref={(input) => this.input = input}></input>
+               {/*  <div ref={this.myRef}></div> */}
             </div>
         )
     }

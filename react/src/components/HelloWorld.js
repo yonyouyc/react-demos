@@ -17,7 +17,7 @@ class HelloWorld extends React.Component {
                 <Count></Count>
                 <Count2></Count2>
                 <Clock></Clock>
-                < AutoFocusInput > </AutoFocusInput>
+                <AutoFocusInput></AutoFocusInput>
                 <NameList></NameList>
             </div>
         )
